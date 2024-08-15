@@ -20,6 +20,7 @@ requirements:
     - pkg-config
     - binutils  # [win]
     - cctools_osx-64 986 ha1c5b94_0  # [osx and x86_64]
+    - libcxx 18.1.8 hef8daea_1  # [osx and x86_64]
   host:
     - openssl  # [unix]
 
