@@ -13,7 +13,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('rust') }}
+    - {{ compiler('rust') }} 1.79.0
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - cargo-bundle-licenses
