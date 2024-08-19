@@ -1,0 +1,3 @@
+# https://github.com/conda-forge/polars-feedstock/issues/259
+rust_compiler_version:
+- 1.75.0
