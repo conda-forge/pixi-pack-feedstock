@@ -18,6 +18,8 @@ openssl:
 - '3'
 rust_compiler:
 - rust
+rust_compiler_version:
+- 1.75.0
 target_platform:
 - linux-64
 zip_keys:
