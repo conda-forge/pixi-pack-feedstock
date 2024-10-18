@@ -1,5 +1,5 @@
 {% set name = "pixi-pack" %}
-{% set version = "0.1.8" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/quantco/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c7b45bdbed76e37405e68968816c044ce99af787b59eafd6b846bdc5938da801
+  sha256: f8a8141de6eb0f015939c9a035917fde15081ec1b279fccbbf30dfce4b5c1353
 build:
   number: 0
 
