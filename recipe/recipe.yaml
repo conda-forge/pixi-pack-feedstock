@@ -1,0 +1,39 @@
+context:
+  name: pixi-pack
+  version: '0.3.1'
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/quantco/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: d0c6eb4d20747a5ea47093dc06e80e15a46ec3fd9c3c1e93ee035480e3b0a75a
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+    - pkg-config
+  host:
+    - if: unix
+      then: [openssl]
+
+tests:
+  - script: pixi-pack --help
+
+about:
+  repository: https://github.com/quantco/pixi-pack
+  summary: 📦 A tool to pack and unpack conda environments created with pixi
+  license: BSD-3-Clause
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+
+extra:
+  recipe-maintainers:
+    - pavelzw
