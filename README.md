@@ -9,6 +9,8 @@ Package license: BSD-3-Clause
 
 Summary: 📦 A tool to pack and unpack conda environments created with pixi
 
+Development: https://github.com/quantco/pixi-pack
+
 Current build status
 ====================
 
