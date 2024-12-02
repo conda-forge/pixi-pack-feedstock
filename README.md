@@ -3,7 +3,7 @@ About pixi-pack-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pixi-pack-feedstock/blob/main/LICENSE.txt)
 
-
+Home: https://github.com/quantco/pixi-pack
 
 Package license: BSD-3-Clause
 
