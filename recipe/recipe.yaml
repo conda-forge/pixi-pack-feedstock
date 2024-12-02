@@ -27,6 +27,7 @@ tests:
   - script: pixi-pack --help
 
 about:
+  homepage: https://github.com/quantco/pixi-pack
   repository: https://github.com/quantco/pixi-pack
   summary: 📦 A tool to pack and unpack conda environments created with pixi
   license: BSD-3-Clause
