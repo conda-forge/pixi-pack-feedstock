@@ -3,11 +3,13 @@ About pixi-pack-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pixi-pack-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/quantco/pixi-pack
+
 
 Package license: BSD-3-Clause
 
 Summary: 📦 A tool to pack and unpack conda environments created with pixi
+
+Development: https://github.com/quantco/pixi-pack
 
 Current build status
 ====================
