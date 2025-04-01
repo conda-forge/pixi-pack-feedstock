@@ -30,6 +30,7 @@ about:
   homepage: https://github.com/quantco/pixi-pack
   repository: https://github.com/quantco/pixi-pack
   summary: 📦 A tool to pack and unpack conda environments created with pixi
+  documentation: https://pixi.sh/latest/deployment/pixi_pack
   license: BSD-3-Clause
   license_file:
     - LICENSE
