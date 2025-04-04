@@ -11,6 +11,8 @@ Summary: 📦 A tool to pack and unpack conda environments created with pixi
 
 Development: https://github.com/quantco/pixi-pack
 
+Documentation: https://pixi.sh/latest/deployment/pixi_pack
+
 Current build status
 ====================
 
@@ -199,8 +201,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@delsner](https://github.com/delsner/)
 * [@pavelzw](https://github.com/pavelzw/)
-
-
-<!-- dummy commit to enable rerendering -->
 
