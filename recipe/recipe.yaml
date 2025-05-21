@@ -10,7 +10,7 @@ source:
   url: https://github.com/quantco/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 6ca87106a44632c49394c42fb34b5f78f393bfd66b959787263c7730d7eea598
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
