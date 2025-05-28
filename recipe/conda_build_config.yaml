@@ -1,0 +1,2 @@
+github_actions_labels:          # [osx and arm64]
+- cirun-macos-m4-large          # [osx and arm64]
