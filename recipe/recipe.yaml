@@ -9,14 +9,16 @@ package:
 source:
   url: https://github.com/quantco/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 3ac701432aa850d27f5e02656f740f9710b39df41c9196b9c60ac2599d322982
+
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - ${{ compiler('rust') }}
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
+    - cargo-auditable
     - cargo-bundle-licenses
     - pkg-config
   host:
