@@ -2,16 +2,22 @@ context:
   name: pixi-pack
   version: "0.7.1"
 
+recipe:
+  name: pixi-pack
+  version: ${{ version }}
+
 source:
   url: https://github.com/quantco/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 02c9f66d35061ddfbd690a632aafe4415d451762b1e755010a8b33b81285f686
+
+build:
+  number: 0
 
 outputs:
   - package:
       name: pixi-pack
       version: ${{ version }}
     build:
-      number: 0
       script:
         env:
           CARGO_PROFILE_RELEASE_STRIP: symbols
@@ -38,7 +44,6 @@ outputs:
       name: pixi-unpack
       version: ${{ version }}
     build:
-      number: 0
       script:
         env:
           CARGO_PROFILE_RELEASE_STRIP: symbols
