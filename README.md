@@ -7,7 +7,7 @@ Home: https://github.com/quantco/pixi-pack
 
 Package license: BSD-3-Clause
 
-Summary: 📦 A tool to pack and unpack conda environments created with pixi
+Summary: 📦 A toolset to pack and unpack conda environments created with pixi
 
 Development: https://github.com/quantco/pixi-pack
 
@@ -86,6 +86,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pixi--pack-green.svg)](https://anaconda.org/conda-forge/pixi-pack) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pixi-pack.svg)](https://anaconda.org/conda-forge/pixi-pack) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pixi-pack.svg)](https://anaconda.org/conda-forge/pixi-pack) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pixi-pack.svg)](https://anaconda.org/conda-forge/pixi-pack) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pixi--unpack-green.svg)](https://anaconda.org/conda-forge/pixi-unpack) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pixi-unpack.svg)](https://anaconda.org/conda-forge/pixi-unpack) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pixi-unpack.svg)](https://anaconda.org/conda-forge/pixi-unpack) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pixi-unpack.svg)](https://anaconda.org/conda-forge/pixi-unpack) |
 
 Installing pixi-pack
 ====================
@@ -97,16 +98,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pixi-pack` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pixi-pack, pixi-unpack` can be installed with `conda`:
 
 ```
-conda install pixi-pack
+conda install pixi-pack pixi-unpack
 ```
 
 or with `mamba`:
 
 ```
-mamba install pixi-pack
+mamba install pixi-pack pixi-unpack
 ```
 
 It is possible to list all of the versions of `pixi-pack` available on your platform with `conda`:
