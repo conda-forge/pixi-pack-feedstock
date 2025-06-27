@@ -25,7 +25,7 @@ outputs:
         content:
           - if: unix
             then: export OPENSSL_DIR=${{ PREFIX }}
-          - cargo auditable install --locked --no-track --bins --root ${{ PREFIX }} --path . --bin pixi-pack
+          - cargo auditable install --locked --no-track --bin pixi-pack --root ${{ PREFIX }} --path .
           - cargo-bundle-licenses --format yaml --output ./THIRDPARTY.yml
     requirements:
       build:
@@ -40,6 +40,9 @@ outputs:
           then: [openssl]
     tests:
       - script: pixi-pack --help
+      - package_contents:
+          bin: pixi-pack
+          strict: true
   - package:
       name: pixi-unpack
       version: ${{ version }}
@@ -51,7 +54,7 @@ outputs:
         content:
           - if: unix
             then: export OPENSSL_DIR=${{ PREFIX }}
-          - cargo auditable install --locked --no-track --bins --root ${{ PREFIX }} --path . --bin pixi-pack
+          - cargo auditable install --locked --no-track --bin pixi-unpack --root ${{ PREFIX }} --path .
           - cargo-bundle-licenses --format yaml --output ./THIRDPARTY.yml
     requirements:
       build:
@@ -66,6 +69,9 @@ outputs:
           then: [openssl]
     tests:
       - script: pixi-unpack --help
+      - package_contents:
+          bin: pixi-unpack
+          strict: true
 
 about:
   homepage: https://github.com/quantco/pixi-pack
