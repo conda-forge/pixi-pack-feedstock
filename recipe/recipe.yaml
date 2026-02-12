@@ -11,7 +11,7 @@ source:
   sha256: 0e56707767a63ebd462bc823b30024b40570c6f91f9e310a4c422c74dbae5364
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - package:
@@ -41,7 +41,8 @@ outputs:
     tests:
       - script: pixi-pack --help
       - package_contents:
-          bin: pixi-pack
+          bin:
+            - pixi-pack
           strict: true
   - package:
       name: pixi-unpack
@@ -70,7 +71,8 @@ outputs:
     tests:
       - script: pixi-unpack --help
       - package_contents:
-          bin: pixi-unpack
+          bin:
+            - pixi-unpack
           strict: true
 
 about:
