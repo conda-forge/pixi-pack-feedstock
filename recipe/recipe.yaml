@@ -1,6 +1,6 @@
 context:
   name: pixi-pack
-  version: "0.7.5"
+  version: "0.7.6"
 
 recipe:
   name: pixi-pack
@@ -8,10 +8,10 @@ recipe:
 
 source:
   url: https://github.com/quantco/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 0e56707767a63ebd462bc823b30024b40570c6f91f9e310a4c422c74dbae5364
+  sha256: 33d9c3fd58bb50c631825d18328c2eac070d1db4486fdf85f0e347b16904a944
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - package:
