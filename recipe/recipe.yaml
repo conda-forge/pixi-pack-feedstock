@@ -11,7 +11,7 @@ source:
   sha256: d70c7d58730a104e0a7dfc4d5cf7afea5022a8707ceaeeb820595d43678e8155
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - package:
@@ -20,6 +20,9 @@ outputs:
     build:
       script:
         env:
+          # Use cmake to build aws-lc-sys, because conda's CFLAGS inject -O2 which
+          # overrides the -O0 required by jitterentropy-base.c, causing a build failure.
+          AWS_LC_SYS_CMAKE_BUILDER: "1"
           CARGO_PROFILE_RELEASE_STRIP: symbols
           CARGO_PROFILE_RELEASE_LTO: fat
         content:
@@ -35,9 +38,12 @@ outputs:
         - cargo-auditable
         - cargo-bundle-licenses
         - pkg-config
+        - cmake
+        - make
       host:
         - if: unix
-          then: [openssl]
+          then:
+            - openssl
     tests:
       - script: pixi-pack --help
       - package_contents:
@@ -50,6 +56,9 @@ outputs:
     build:
       script:
         env:
+          # Use cmake to build aws-lc-sys, because conda's CFLAGS inject -O2 which
+          # overrides the -O0 required by jitterentropy-base.c, causing a build failure.
+          AWS_LC_SYS_CMAKE_BUILDER: "1"
           CARGO_PROFILE_RELEASE_STRIP: symbols
           CARGO_PROFILE_RELEASE_LTO: fat
         content:
@@ -65,9 +74,12 @@ outputs:
         - cargo-auditable
         - cargo-bundle-licenses
         - pkg-config
+        - cmake
+        - make
       host:
         - if: unix
-          then: [openssl]
+          then:
+            - openssl
     tests:
       - script: pixi-unpack --help
       - package_contents:
