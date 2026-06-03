@@ -39,6 +39,7 @@ outputs:
         - cargo-bundle-licenses
         - pkg-config
         - cmake
+        - make
       host:
         - if: unix
           then:
@@ -74,6 +75,7 @@ outputs:
         - cargo-bundle-licenses
         - pkg-config
         - cmake
+        - make
       host:
         - if: unix
           then:
