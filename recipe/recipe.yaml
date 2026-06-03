@@ -38,9 +38,11 @@ outputs:
         - cargo-auditable
         - cargo-bundle-licenses
         - pkg-config
+        - cmake
       host:
         - if: unix
-          then: [openssl]
+          then:
+            - openssl
     tests:
       - script: pixi-pack --help
       - package_contents:
@@ -68,9 +70,11 @@ outputs:
         - cargo-auditable
         - cargo-bundle-licenses
         - pkg-config
+        - cmake
       host:
         - if: unix
-          then: [openssl]
+          then:
+            - openssl
     tests:
       - script: pixi-unpack --help
       - package_contents:
