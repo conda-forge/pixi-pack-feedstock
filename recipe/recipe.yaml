@@ -55,6 +55,9 @@ outputs:
     build:
       script:
         env:
+          # Use cmake to build aws-lc-sys, because conda's CFLAGS inject -O2 which
+          # overrides the -O0 required by jitterentropy-base.c, causing a build failure.
+          AWS_LC_SYS_CMAKE_BUILDER: "1"
           CARGO_PROFILE_RELEASE_STRIP: symbols
           CARGO_PROFILE_RELEASE_LTO: fat
         content:
