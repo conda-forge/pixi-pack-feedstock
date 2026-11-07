@@ -11,7 +11,7 @@ source:
   sha256: 7cbef9759c399ecbc3b67ebf8c2ad8599bc41c425adb68e7556cbdc2d5a706ca
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - package:
@@ -37,7 +37,7 @@ outputs:
         - ${{ stdlib('c') }}
         - cargo-auditable
         - cargo-bundle-licenses
-        - pkg-config
+        - pkgconf
         - cmake
         - make
       host:
@@ -73,7 +73,7 @@ outputs:
         - ${{ stdlib('c') }}
         - cargo-auditable
         - cargo-bundle-licenses
-        - pkg-config
+        - pkgconf
         - cmake
         - make
       host:
